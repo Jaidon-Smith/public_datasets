@@ -1,5 +1,17 @@
-# public-datasets
+# Public Dataset
 Various public datasets compatible with TensorFlow Datasets
+##JSUT
+This corpus consists of Japanese text (transcription) and reading-style audio. The audio data is sampled at 48kHz and recorded in our anechoic room. we recorded voices of a native Japanese female speaker. This corpus contains 10-hour speech consisting of the following data: 
+
+* basic5000 ... covers all of daily-use characters (jouyou kanji).
+* utparaphrase512 ... replaces a part of a sentence with its paraphrase.
+* onomatopee300 ... includes onomatopees (onomatopia) of Japanese.
+* countersuffix26 ... countersuffix of Japanese
+* loanword128 ... loanwords of Japanese (e.g., ググる ['google' as verb])
+* voiceactress100 ... para-speech to the Voice Actress Corpus (free corpus of professional female speakers)
+* travel1000 ... travel-domain corpus
+* precedent130 ... precedent sentences
+* repeat500 ... repeatedly spoken utterances (100 sentence * 5 times) 
 
 # How to Use
 Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) is installed.
