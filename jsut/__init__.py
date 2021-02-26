@@ -1,3 +1,3 @@
-"""jsut_beta dataset."""
+"""jsut dataset."""
 
 from .jsut import Jsut
