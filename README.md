@@ -1,6 +1,6 @@
-# Public Dataset
 Various public datasets compatible with TensorFlow Datasets
-##JSUT
+# Dataset Information
+## JSUT
 This corpus consists of Japanese text (transcription) and reading-style audio. The audio data is sampled at 48kHz and recorded in our anechoic room. we recorded voices of a native Japanese female speaker. This corpus contains 10-hour speech consisting of the following data: 
 
 * basic5000 ... covers all of daily-use characters (jouyou kanji).
