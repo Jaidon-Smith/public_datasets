@@ -36,6 +36,6 @@ data_dir argument is optional.
 ```python
 download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/tensorflow_datasets/downloads/manual')
 
-ds = tfds.load("jsut", data_dir='/gdrive/MyDrive/datasets/tensorflow_datasets', download_and_prepare_kwargs={"download_config": download_config})
+ds = tfds.load("jsut", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
 ```
 
