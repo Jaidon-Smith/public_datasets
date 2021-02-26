@@ -88,16 +88,28 @@ class Jsut(tfds.core.GeneratorBasedBuilder):
   def _generate_examples(self, directory):
     """Yields examples."""
     # TODO(jsut): Yields (key, example) tuples from the dataset
-    metadata_path = os.path.join(directory, 'basic5000', 'transcript_utf8.txt')
-    with tf.io.gfile.GFile(metadata_path) as f:
-      for line in f:
-          line = line.strip()
-          key, transcript = line.split(":")
-          wav_path = os.path.join(directory, "basic5000", "wav",
-                                    "%s.wav" % key)
-          example = {
-          "id": key,
-          "speech": wav_path,
-          "text": transcript,
-          }
-          yield key, example
+    folders = [
+      'basic5000',
+      'utparaphrase512',
+      'onomatopee300',
+      'countersuffix26',
+      'loanword128',
+      'voiceactress100',
+      'travel1000',
+      'precedent130',
+      'repeat500',
+    ]
+    for folder in folders:
+      metadata_path = os.path.join(directory, folder, 'transcript_utf8.txt')
+      with tf.io.gfile.GFile(metadata_path) as f:
+        for line in f:
+            line = line.strip()
+            key, transcript = line.split(":")
+            wav_path = os.path.join(directory, folder, "wav",
+                                      "%s.wav" % key)
+            example = {
+            "id": key,
+            "speech": wav_path,
+            "text": transcript,
+            }
+            yield key, example
