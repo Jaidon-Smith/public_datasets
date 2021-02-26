@@ -16,7 +16,7 @@ Install pydub
 pip install pydub
 ```
 
-Load the dataset, it is necessary to specify the manual directory where the zip file should be placed.
+Load the dataset, it is necessary to specify the manual directory where the zip file was placed.
 data_dir argument is optional.
 
 ```python
