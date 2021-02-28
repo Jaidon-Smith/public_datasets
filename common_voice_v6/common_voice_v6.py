@@ -36,12 +36,7 @@ _LANGUAGES = ["en", "de", "fr", "cy", "br", "cv", "tr", "tt", "ky", "ga-IE", "ka
 
 class CommonVoiceConfig(tfds.core.BuilderConfig):
   """Configuration Class for Mozilla CommonVoice Dataset."""
-
-  MANUAL_DOWNLOAD_INSTRUCTIONS = """
-  Place the `(language).tar`
-  file in the `manual_dir/`.
-  """
-
+  
   def __init__(self, *, language, **kwargs):
     """Constructs CommonVoiceConfig.
     Args:
@@ -61,6 +56,12 @@ class CommonVoiceConfig(tfds.core.BuilderConfig):
 
 
 class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
+
+  MANUAL_DOWNLOAD_INSTRUCTIONS = """
+  Place the `(language).tar`
+  file in the `manual_dir/`.
+  """
+
   """Mozilla Common Voice Dataset."""
   BUILDER_CONFIGS = [
       CommonVoiceConfig(language=l)
