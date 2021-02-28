@@ -38,7 +38,7 @@ class CommonVoiceConfig(tfds.core.BuilderConfig):
   """Configuration Class for Mozilla CommonVoice Dataset."""
 
   MANUAL_DOWNLOAD_INSTRUCTIONS = """
-  Place the `{language}.tar`
+  Place the `(language).tar`
   file in the `manual_dir/`.
   """
 
