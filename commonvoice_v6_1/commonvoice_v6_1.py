@@ -31,7 +31,7 @@ _SPLITS = {
 _GENDER_CLASSES = ["male", "female", "other"]
 
 # OrderedDict to keep collection order constant (en is the default config)
-_LANGUAGES = ["en", "de", "fr", "cy", "br", "cv", "tr", "tt", "ky", "ga-IE", "kab", "ca", "zh-TW", "sl", "it", "nl", "cnh", "eo", "jp"]
+_LANGUAGES = ["en", "de", "fr", "cy", "br", "cv", "tr", "tt", "ky", "ga-IE", "kab", "ca", "zh-TW", "sl", "it", "nl", "cnh", "eo", "ja"]
 
 
 class CommonVoiceConfig(tfds.core.BuilderConfig):
