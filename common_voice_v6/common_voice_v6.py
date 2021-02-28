@@ -85,7 +85,7 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
         homepage="https://voice.mozilla.org/en/datasets",
     )
 
-  def _split_generators(self, dl_manager):
+  def _split_generators(self, dl_manager: tfds.download.DownloadManager):
     #extracted_path = dl_manager.download_and_extract(
     #    _DOWNLOAD_URL.format(self.builder_config.language))
     try:
