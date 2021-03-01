@@ -72,7 +72,7 @@ class Jsut(tfds.core.GeneratorBasedBuilder):
       print("The manual directory is: ", dl_manager.manual_dir)
     except:
       raise Exception("You have not defined the manual directoy where the .zip is located")
-    archive_path = dl_manager.manual_dir + '/jsut_ver1.1.zip'
+    archive_path = dl_manager.manual_dir / 'jsut_ver1.1.zip'
     #archive_path = 'hello2/jsut_ver1.1.zip'
 
     # Extract the manually downloaded `data.zip`
@@ -81,7 +81,7 @@ class Jsut(tfds.core.GeneratorBasedBuilder):
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
             # These kwargs will be passed to _generate_examples
-            gen_kwargs={"directory": extracted_path+'/jsut_ver1.1/'},
+            gen_kwargs={"directory": extracted_path / 'jsut_ver1.1'},
         ),
     ]
 
