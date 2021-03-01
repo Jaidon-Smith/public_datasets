@@ -29,6 +29,14 @@ Consists of about 1h of Japanese speech made up from 1525 sentences.
 
 Zip file can be downloaded [here](https://drive.google.com/file/d/1WTZKU5uv8D8eoUJcwrIa5m-2ya_fmcjt/view?usp=sharing).
 
+## JVS Corpus
+[More information available at dataset's webpage](https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus)
+Japanese speech dataset.
+
+About 30h hours with 100 speakers.
+
+Contains some of the same sentences as jsut.
+
 # How to Use
 Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightly is installed.
 ```
@@ -90,6 +98,24 @@ data_dir argument is optional.
 download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/public_datasets/downloads/manual/')
 
 ds = tfds.load("tatoeba_japanese", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
+```
+
+## JVS Corpus
+```python
+import tatoeba_japanese
+```
+
+Install pydub
+```
+pip install pydub
+```
+
+Load the dataset, it is necessary to specify the manual directory where the tar file was placed.
+data_dir argument is optional.
+```
+download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/public_datasets/downloads/manual/')
+
+ds = tfds.load("jvs", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
 ```
 
 
