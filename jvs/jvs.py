@@ -88,7 +88,7 @@ class Jvs(tfds.core.GeneratorBasedBuilder):
             wav_path = os.path.join(directory, folder, "wav24kHz16bit",
                                           "%s.wav" % key)
 
-            id = str(folder).split('/')[-2] + '_' + key
+            id = str(folder).split('/')[-2] + '_' + str(folder).split('/')[-1] + '_' + key
             example = {
             "id": id,
             "speech": wav_path,
