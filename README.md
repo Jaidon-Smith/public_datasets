@@ -17,6 +17,7 @@ This corpus consists of Japanese text (transcription) and reading-style audio. T
 
 ## Common Voice Version 6
 Multilingual speech corpus.
+
 The Japanese version contains 5h of speech. Only 3h is validated.
 [More information available at dataset's webpage](https://commonvoice.mozilla.org/en/datasets)
 # How to Use
