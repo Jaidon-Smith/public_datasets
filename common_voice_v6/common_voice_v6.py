@@ -131,7 +131,7 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
     with tf.io.gfile.GFile(label_path) as file_:
       dataset = csv.DictReader(file_, delimiter="\t")
       for i, row in enumerate(dataset):
-        file_path = os.path.join(audio_path, "%s.mp3" % row["path"])
+        file_path = os.path.join(audio_path, row["path"])
 
         if tf.io.gfile.exists(file_path):
           yield i, {
