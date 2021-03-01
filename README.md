@@ -25,7 +25,7 @@ The Japanese version contains 5h of speech. Only 3h is validated.
 ## Tatoeba Japanese
 Japanese sentences that contain audio on [Tatobeta](https://tatoeba.org/eng/downloads).
 
-Consists of about 1h of Japanese speech.
+Consists of about 1h of Japanese speech made up from 1525 sentences.
 
 # How to Use
 Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightly is installed.
