@@ -132,6 +132,7 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
       dataset = csv.DictReader(file_, delimiter="\t")
       for i, row in enumerate(dataset):
         file_path = os.path.join(audio_path, "%s.mp3" % row["path"])
+
         if tf.io.gfile.exists(file_path):
           yield i, {
               "client_id": row["client_id"],
@@ -142,3 +143,6 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
               "age": row["age"],
               "gender": row["gender"] if row["gender"] else -1
           }
+        else:
+          print("The file did not exist: ", file_path)
+          break
