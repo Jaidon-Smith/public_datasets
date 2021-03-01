@@ -100,7 +100,7 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
       raise Exception("You have not defined the manual directoy where the .zip is located")
     #archive_path = os.path.join(dl_manager.manual_dir, self.builder_config.language + '.tar')
     #archive_path = os.path.join(dl_manager.manual_dir, 'ja.tar')
-    archive_path = dl_manager.manual_dir
+    #archive_path = dl_manager.manual_dir
 
     # Extract the manually downloaded `data.zip`
     extracted_path = dl_manager.extract(archive_path)
