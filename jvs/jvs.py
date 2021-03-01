@@ -69,9 +69,9 @@ class Jvs(tfds.core.GeneratorBasedBuilder):
     folders = []
     level_1_folders = [i for i in os.listdir(directory) if os.path.isdir(os.path.join(directory, i))]
     for i in level_1_folders:
-        level_2_folders = [j for j in os.listdir(i) if os.path.isdir(os.path.join(i, j))]
+        level_2_folders = [j for j in os.listdir(os.path.join(directory, i)) if os.path.isdir(os.path.join(directory, i, j))]
         for j in level_2_folders:
-            folders.append(j)
+            folders.append(os.path.join(directory, i, j))
 
     for folder in folders:
       print("Folder:", folder)
