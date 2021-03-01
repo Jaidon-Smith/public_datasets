@@ -80,9 +80,15 @@ class Jvs(tfds.core.GeneratorBasedBuilder):
         for line in f:
             line = line.strip()
             key, transcript = line.split(":")
-            wav_path = os.path.join(directory, folder, "wav24kHz16bit",
-                                      "%s.wav" % key)
-            id = str(folder).split('/')[-2] + key
+
+            try:
+                wav_path = os.path.join(directory, folder, "wav24kHz16bit",
+                                          "%s.wav" % key)
+            except:
+                print("Failed to find:", os.path.join(directory, folder, "wav24kHz16bit"), "%s.wav" % key)
+                print("Skipping...")
+                continue
+            id = str(folder).split('/')[-2] + '_' + key
             example = {
             "id": id,
             "speech": wav_path,
