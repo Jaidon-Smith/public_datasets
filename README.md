@@ -42,3 +42,21 @@ download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datas
 ds = tfds.load("jsut", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
 ```
 
+## Common Voice Version 6
+Download the dataset tar file for the desired language from the dataset's webpage:
+[https://commonvoice.mozilla.org/en/datasets](https://commonvoice.mozilla.org/en/datasets)
+```python
+import common_voice_v6
+```
+Install pydub
+```
+pip install pydub
+```
+Load the dataset, it is necessary to specify the manual directory where the tar file was placed.
+data_dir argument is optional.
+```
+download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/public_datasets/downloads/manual/commonvoice')
+
+ds = tfds.load("common_voice_v6/ja", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
+```
+
