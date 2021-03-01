@@ -54,7 +54,7 @@ class TatoebaJapanese(tfds.core.GeneratorBasedBuilder):
       print("The manual directory is: ", dl_manager.manual_dir)
     except:
       raise Exception("You have not defined the manual directoy where the .zip is located")
-    archive_path = dl_manager.manual_dir + '/tatoeba_japanese.zip'
+    archive_path = dl_manager.manual_dir / 'tatoeba_japanese.zip'
 
     # Extract the manually downloaded `data.zip`
     extracted_path = dl_manager.extract(archive_path)
