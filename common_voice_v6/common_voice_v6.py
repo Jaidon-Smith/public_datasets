@@ -126,6 +126,8 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
     Yields:
       example: The example `dict`
     """
+    print("Audio: ", audio_path)
+    print("Label: ", label_path)
     with tf.io.gfile.GFile(label_path) as file_:
       dataset = csv.DictReader(file_, delimiter="\t")
       for i, row in enumerate(dataset):
