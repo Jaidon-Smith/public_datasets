@@ -113,7 +113,7 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
             name=k,
             gen_kwargs={
                 "audio_path": clip_folder,
-                "label_path": os.path.join(extracted_path, "%s.tsv" % v)
+                "label_path": os.path.join(extracted_path, "cv-corpus-6.1-2020-12-11", "%s.tsv" % v)
             },
         ) for k, v in _SPLITS.items()
     ]
