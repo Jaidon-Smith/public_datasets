@@ -13,10 +13,27 @@ This corpus consists of Japanese text (transcription) and reading-style audio. T
 * voiceactress100 ... para-speech to the Voice Actress Corpus (free corpus of professional female speakers)
 * travel1000 ... travel-domain corpus
 * precedent130 ... precedent sentences
-* repeat500 ... repeatedly spoken utterances (100 sentence * 5 times) 
+* repeat500 ... repeatedly spoken utterances (100 sentence * 5 times)
+
+## Common Voice Version 6
+[More information available at dataset's webpage](https://commonvoice.mozilla.org/en/datasets)
+
+Multilingual speech corpus.
+
+The Japanese version contains 5h of speech. Only 3h is validated.
+
+## Tatoeba Japanese
+Japanese sentences that contain audio on [Tatobeta](https://tatoeba.org/eng/downloads).
+
+Consists of about 1h of Japanese speech made up from 1525 sentences.
+
+Zip file can be downloaded [here](https://drive.google.com/file/d/1WTZKU5uv8D8eoUJcwrIa5m-2ya_fmcjt/view?usp=sharing).
 
 # How to Use
-Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) is installed.
+Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightly is installed.
+```
+pip install tfds-nightly
+```
 Then git clone this repository with `git clone https://github.com/Jaidon-Smith/public-datasets.git`
 
 ## JSUT
@@ -37,5 +54,23 @@ data_dir argument is optional.
 download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/public_datasets/downloads/manual')
 
 ds = tfds.load("jsut", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
+```
+
+## Common Voice Version 6
+Download the dataset tar file for the desired language from the dataset's webpage:
+[https://commonvoice.mozilla.org/en/datasets](https://commonvoice.mozilla.org/en/datasets)
+```python
+import common_voice_v6
+```
+Install pydub
+```
+pip install pydub
+```
+Load the dataset, it is necessary to specify the manual directory where the tar file was placed.
+data_dir argument is optional.
+```
+download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/public_datasets/downloads/manual/commonvoice')
+
+ds = tfds.load("common_voice_v6/ja", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
 ```
 
