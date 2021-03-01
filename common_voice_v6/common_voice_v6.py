@@ -107,7 +107,7 @@ class CommonVoiceV6(tfds.core.GeneratorBasedBuilder):
     extracted_path = dl_manager.extract(archive_path)
 
 
-    clip_folder = os.path.join(extracted_path, "clips")
+    clip_folder = os.path.join(extracted_path, "cv-corpus-6.1-2020-12-11", "clips")
     return [
         tfds.core.SplitGenerator(  # pylint: disable=g-complex-comprehension
             name=k,
