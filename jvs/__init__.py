@@ -1,3 +1,3 @@
 """jsut dataset."""
 
-from .jvs import jvs
+from .jvs import Jvs
