@@ -1,12 +1,12 @@
-"""jsut dataset."""
+"""jsut_beta dataset."""
 
 import tensorflow_datasets as tfds
-from . import jsut
+from . import tatoeba_japanese
 
 
-class JsutTest(tfds.testing.DatasetBuilderTestCase):
-  """Tests for jsut dataset."""
-  DATASET_CLASS = jsut.Jsut
+class TatoebaJapaneseTest(tfds.testing.DatasetBuilderTestCase):
+  """Tests for tatoeba_japanese dataset."""
+  DATASET_CLASS = tatoeba_japanese.TatoebaJapanese
   SPLITS = {
       'train': 3,  # Number of fake train example
       'test': 1,  # Number of fake test example
