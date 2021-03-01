@@ -66,7 +66,7 @@ class Jvs(tfds.core.GeneratorBasedBuilder):
 
   def _generate_examples(self, directory):
     """Yields examples."""
-    folders = tf.io.gfile.glob(os.path.join(directory, "*/"))
+    folders = tf.io.gfile.glob(os.path.join(directory, "*", ""))
     for folder in folders:
       print("Folder:", folder)
       metadata_path = os.path.join(directory, folder, 'transcripts_utf8.txt')
