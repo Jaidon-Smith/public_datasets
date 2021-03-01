@@ -13,8 +13,11 @@ This corpus consists of Japanese text (transcription) and reading-style audio. T
 * voiceactress100 ... para-speech to the Voice Actress Corpus (free corpus of professional female speakers)
 * travel1000 ... travel-domain corpus
 * precedent130 ... precedent sentences
-* repeat500 ... repeatedly spoken utterances (100 sentence * 5 times) 
+* repeat500 ... repeatedly spoken utterances (100 sentence * 5 times)
 
+## Common Voice Version 6
+Multilingual speech corpus.
+[More information available at dataset's webpage](https://commonvoice.mozilla.org/en/datasets)
 # How to Use
 Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightly is installed.
 ```
