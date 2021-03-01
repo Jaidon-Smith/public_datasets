@@ -31,13 +31,13 @@ class Jvs(tfds.core.GeneratorBasedBuilder):
         description=_DESCRIPTION,
         features=tfds.features.FeaturesDict({
             "id": tf.string,
-            "speech": tfds.features.Audio(sample_rate=48000),
+            "speech": tfds.features.Audio(sample_rate=24000),
             "text": tfds.features.Text(),
         }),
         supervised_keys=("text", "speech"),
         homepage='https://sites.google.com/site/shinnosuketakamichi/research-topics/jvs_corpus',
         citation=_CITATION,
-        metadata=tfds.core.MetadataDict(sample_rate=48000),
+        metadata=tfds.core.MetadataDict(sample_rate=24000),
     )
 
   def _split_generators(self, dl_manager: tfds.download.DownloadManager):
