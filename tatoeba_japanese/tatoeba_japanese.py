@@ -71,13 +71,14 @@ class TatoebaJapanese(tfds.core.GeneratorBasedBuilder):
     # Yields (key, example) tuples from the dataset
 
     for folder in folders:
-      metadata_path = os.path.join(directory, folder, 'transcript_utf8.txt')
+      metadata_path = os.path.join(directory, folder, 'sentences.txt')
       with tf.io.gfile.GFile(metadata_path) as f:
         for line in f:
             line = line.strip()
-            key, transcript = line.split(":")
-            wav_path = os.path.join(directory, folder, "wav",
-                                      "%s.wav" % key)
+            path, transcript = line.split(" ")
+            wav_path = os.path.join(directory, folder, "clips",
+                                      path)
+            key = path.split('.mp3')[0]
             example = {
             "id": key,
             "speech": wav_path,
