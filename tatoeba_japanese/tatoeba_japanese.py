@@ -69,8 +69,8 @@ class TatoebaJapanese(tfds.core.GeneratorBasedBuilder):
   def _generate_examples(self, directory):
     """Yields examples."""
     # Yields (key, example) tuples from the dataset
-      metadata_path = os.path.join(directory, folder, 'sentences.txt')
-      with tf.io.gfile.GFile(metadata_path) as f:
+    metadata_path = os.path.join(directory, folder, 'sentences.txt')
+    with tf.io.gfile.GFile(metadata_path) as f:
         for line in f:
             line = line.strip()
             path, transcript = line.split(" ")
