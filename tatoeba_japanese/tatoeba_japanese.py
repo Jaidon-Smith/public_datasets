@@ -62,7 +62,7 @@ class TatoebaJapanese(tfds.core.GeneratorBasedBuilder):
         tfds.core.SplitGenerator(
             name=tfds.Split.TRAIN,
             # These kwargs will be passed to _generate_examples
-            gen_kwargs={"directory": extracted_path+'/tatoeba_japanese/'},
+            gen_kwargs={"directory": extracted_path / 'tatoeba_japanese'},
         ),
     ]
 
