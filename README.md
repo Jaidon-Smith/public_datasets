@@ -16,10 +16,12 @@ This corpus consists of Japanese text (transcription) and reading-style audio. T
 * repeat500 ... repeatedly spoken utterances (100 sentence * 5 times)
 
 ## Common Voice Version 6
+[More information available at dataset's webpage](https://commonvoice.mozilla.org/en/datasets)
+
 Multilingual speech corpus.
 
 The Japanese version contains 5h of speech. Only 3h is validated.
-[More information available at dataset's webpage](https://commonvoice.mozilla.org/en/datasets)
+
 # How to Use
 Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightly is installed.
 ```
