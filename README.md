@@ -16,7 +16,10 @@ This corpus consists of Japanese text (transcription) and reading-style audio. T
 * repeat500 ... repeatedly spoken utterances (100 sentence * 5 times) 
 
 # How to Use
-Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) is installed.
+Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightly is installed.
+```
+pip install tfds-nightly
+```
 Then git clone this repository with `git clone https://github.com/Jaidon-Smith/public-datasets.git`
 
 ## JSUT
