@@ -74,3 +74,22 @@ download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datas
 ds = tfds.load("common_voice_v6/ja", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
 ```
 
+## Tatoeba Japanese
+```python
+import tatoeba_japanese
+```
+
+Install pydub
+```
+pip install pydub
+```
+
+Load the dataset, it is necessary to specify the manual directory where the tar file was placed.
+data_dir argument is optional.
+```
+download_config = tfds.download.DownloadConfig(manual_dir='/gdrive/MyDrive/datasets/public_datasets/downloads/manual/')
+
+ds = tfds.load("tatoeba_japanese", data_dir='/gdrive/MyDrive/datasets/public_datasets', download_and_prepare_kwargs={"download_config": download_config})
+```
+
+
