@@ -43,7 +43,7 @@ Make sure that [TensorFlow Datasets](https://www.tensorflow.org/datasets) Nightl
 ```
 pip install tfds-nightly
 ```
-Then git clone this repository with `git clone https://github.com/Jaidon-Smith/public-datasets.git`
+Then git clone this repository with `git clone https://github.com/Jaidon-Smith/public_datasets.git`
 
 ## JSUT
 Download the dataset zip file from the dataset's webpage:
