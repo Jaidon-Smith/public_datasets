@@ -49,7 +49,7 @@ Then git clone this repository with `git clone https://github.com/Jaidon-Smith/p
 Download the dataset zip file from the dataset's webpage:
 [https://sites.google.com/site/shinnosuketakamichi/publication/jsut](https://sites.google.com/site/shinnosuketakamichi/publication/jsut)
 ```python
-import jsut
+import public_datasets.jsut
 ```
 Install pydub
 ```
@@ -69,7 +69,7 @@ ds = tfds.load("jsut", data_dir='/gdrive/MyDrive/datasets/public_datasets', down
 Download the dataset tar file for the desired language from the dataset's webpage:
 [https://commonvoice.mozilla.org/en/datasets](https://commonvoice.mozilla.org/en/datasets)
 ```python
-import common_voice_v6
+import public_datasets.common_voice_v6
 ```
 Install pydub
 ```
@@ -85,7 +85,7 @@ ds = tfds.load("common_voice_v6/ja", data_dir='/gdrive/MyDrive/datasets/public_d
 
 ## Tatoeba Japanese
 ```python
-import tatoeba_japanese
+import public_datasets.tatoeba_japanese
 ```
 
 Install pydub
@@ -103,7 +103,7 @@ ds = tfds.load("tatoeba_japanese", data_dir='/gdrive/MyDrive/datasets/public_dat
 
 ## JVS Corpus
 ```python
-import tatoeba_japanese
+import public_datasets.jvs
 ```
 
 Install pydub
